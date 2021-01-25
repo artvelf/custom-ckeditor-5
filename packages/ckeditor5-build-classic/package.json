@@ -34,9 +34,12 @@
     "@ckeditor/ckeditor5-editor-classic": "^24.0.0",
     "@ckeditor/ckeditor5-essentials": "^24.0.0",
     "@ckeditor/ckeditor5-font": "^24.0.0",
+    "@ckeditor/ckeditor5-heading": "^24.0.0",
     "@ckeditor/ckeditor5-link": "^24.0.0",
     "@ckeditor/ckeditor5-list": "^24.0.0",
-    "@ckeditor/ckeditor5-markdown-gfm": "^24.0.0",
+    "@ckeditor/ckeditor5-paragraph": "^24.0.0",
+    "@ckeditor/ckeditor5-paste-from-office": "^24.0.0",
+    "@ckeditor/ckeditor5-table": "^24.0.0",
     "@ckeditor/ckeditor5-remove-format": "^24.0.0",
     "@ckeditor/ckeditor5-theme-lark": "^24.0.0",
     "@ckeditor/ckeditor5-typing": "^24.0.0",
@@ -65,5 +68,6 @@
     "preversion": "npm run build"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-markdown-gfm": "^24.0.0"
   }
 }

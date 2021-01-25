@@ -14,12 +14,15 @@ import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
+import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import Markdown from '@ckeditor/ckeditor5-markdown-gfm/src/markdown';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import Table from '@ckeditor/ckeditor5-table/src/table';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 
@@ -36,18 +39,21 @@ const htmlPlugins = [
 	FontColor,
 	FontFamily,
 	FontSize,
+	Heading,
 	Italic,
 	Link,
 	List,
 	Paragraph,
+	PasteFromOffice,
 	RemoveFormat,
+	Table,
 	TextTransformation,
 	Underline,
 ];
 
 const markdownPlugins = [
+	...htmlPlugins,
 	Markdown,
-	...htmlPlugins
 ];
 
 // Editor configuration.
@@ -82,8 +88,8 @@ const defaultConfig = {
 	language: 'en'
 };
 
-HtmlEditor.plugins = htmlPlugins;
-MarkdownEditor.plugins = markdownPlugins;
+HtmlEditor.builtinPlugins = htmlPlugins;
+MarkdownEditor.builtinPlugins = markdownPlugins;
 
 HtmlEditor.defaultConfig = defaultConfig;
 MarkdownEditor.defaultConfig = defaultConfig;
